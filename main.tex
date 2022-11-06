@@ -1,0 +1,235 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage[super]{nth}
+\usepackage[top=2cm, bottom=2cm]{geometry}
+\usepackage{array}
+\usepackage{contour}
+\usepackage{ulem}
+
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\renewcommand\footnoterule{\rule{\linewidth}{0.5pt}}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\degreeTable}{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}} r}
+    {\textbf{University of Cambridge: Natural Sciences M.Sci. (Physical)}} & \textit{Sep. 2017 -- July 2021}\vspace{2pt}
+    \end{tabular*}
+    \begin{tabular*}{0.97\textwidth}[t]{p{0.1\textwidth} >{\raggedright\arraybackslash}p{0.76\textwidth}@{\hskip 0.1cm}r} % @{\extracolsep{\fill}}
+        Part IA & Computer Science,  Materials Science, Mathematics, and Physics. & \nth{1} (75.4\%)\\
+        
+        Part IB & Double Physics and Materials Science.& \nth{1} (76.7\%)\\
+        
+        Part II & Physics: my courses included Advanced Quantum, Astrophysical Fluid Dynamics, Particle and Nuclear Physics, and Relativity. & \nth{1} (79.2\%)\\
+        
+        Part III & Physics: I achieved the highest mark in the cohort in both the Particle Physics and Relativistic Astrophysics and Cosmology major exams. My minor exams included Gauge Field Theory and Advanced Statistical Mechanics. & \nth{1} (80.0\%) \\ 
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\schoolTable}{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}} r}
+      \textbf{Beckfoot School} &\textit{Sep. 2010 -- June 2017}\vspace{-5pt}
+    \end{tabular*}
+
+    \begin{tabular*}{0.97\textwidth}[t]{p{0.1\linewidth} >{\raggedright\arraybackslash}p{0.73\linewidth} r}
+      A-level & Computer Science: A*, Maths: A*, Further Maths: A*, Physics: A*. & \\
+      AS-level & Chemistry: A. & \\
+      GCSE & 1 A\^{}, 8 A*s, 2As and 1 B. & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{#2} \\
+      % \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]\setlength\itemsep{1pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\setlength\itemsep{1pt}}
+\newcommand{\resumeItemListEnd}{\vspace{-5pt}\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Adam Ormondroyd} \\ \vspace{10pt}
+    \small \href{tel:07754546582}{\myuline{07754546582}} $|$ \href{mailto:Adam.Ormondroyd@gmail.com}{\myuline{Adam.Ormondroyd@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/adam-ormondroyd}{\myuline{linkedin.com/in/adam-ormondroyd}} $|$
+    \href{https://github.com/Ormorod}{\myuline{github.com/Ormorod}}
+    \vspace{-7pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \degreeTable
+    % \schoolTable
+    % \footnotetext{Due to taking formative assessments because of COVID, will be awarded once I have completed Part III.}
+    %\schoolTable
+  \resumeSubHeadingListEnd
+
+
+%-----------TEACHING-----------
+\section{Teaching}
+    \resumeItemListStart
+    \resumeItem
+    {During the first year of my PhD I supervised Part IA NST Mathematics, starting with four students from Pembroke in Michaelmas, then taking on another five from Queens' from Christmas onwards. I will be supervising for both colleges again in 2022/23.}
+    \resumeItem
+    {I assisted teaching year 7 music classes throughout \nth{6} form, this improved my patience and I learned to coordinate with and reinforce the teacher.}
+    \resumeItem
+    {Also in \nth{6} form, I took part in after-school two-to-one sessions with year 10 and 11 students requiring extra help. I learned to explain concepts I find intuitive clearly and respectfully.}
+    \resumeItemListEnd
+
+
+%-----------RESEARCH----------- 
+\section{Research}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {PhD Project: ``Advanced Bayesian Data Analysis for Astrophysics, }{Oct. 2021 -- present}
+      \vspace{-10.5pt}
+      \resumeSubheading{ Cosmology, and Beyond"}{Prof.~M.P.~Hobson, Dr.~W.J.~Handley, Prof.~A.N.~Lasenby}
+      \resumeItemListStart
+        \item[]
+        In cosmology, there are many cases where it is useful to reconstruct one--dimensional functions, such as the primordial matter power spectrum or the evolution of the dark energy equation of state. I am investigating a free-form approach: a linear spline between a variable number of nodes, using my modified branches of the Boltzmann code \href{https://github.com/Ormorod/CAMB}{\texttt{CAMB}}, sampling and modelling framework \href{https://github.com/ormorod/cobaya}{\texttt{Cobaya}}, and the nested sampler \href{https://github.com/ormorod/PolyChordLite}{\texttt{PolyChord}}. 
+      \resumeItemListEnd
+  
+    \resumeSubheading
+      {Part III Research Project ``Controlling the Beast"}{Oct. 2020 -- May 2021}
+      \resumeItemListStart
+        \item[]
+        The Magdelena Ridge Observatory Interferometer has a problem with its prototype hardware: the mirrors used to steer light beams from the telescopes to the combining facility are thermally unstable, causing the light beams to wander in angle unacceptably. My project used temperature measurements of the components to understand the dominant causes of this motion, and developed a predictive model to be used to control a corrective system. I also identified issues with the experimental setup which will be corrected in future tests. I learned to use advanced statistical techniques including principal component analysis and singular value decomposition, and machine learning using the Keras API for TensorFlow.
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Blundell Lab, University of Cambridge}{June 2020 -- Sep. 2020}
+      \resumeItemListStart
+        \item[]
+        I remotely investigated a dataset of ultra-deep genome sequences from the Avon Longnitudinal Study of Parents and Children (ALSPAC) to create a model for the frequency of sequencing errors in blood samples. I conclusively showed that the position-specific Poisson noise model usually used to identify low-frequency variants is unsuitable. I improved my data analysis skills, in particular in dealing with using files much larger than my laptop's RAM, and gained insight into working in a different field.
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+    \resumeSubheading{Gravitational Physics Group, Cardiff University}{July 2019 -- Aug. 2019}
+      \resumeItemListStart
+        \item[]
+        I designed and simulated an interferometer using the Finesse software via Python to investigate the holographic principle. Previous setups had 40m arms; the challenge was to fit in a cleanroom only 5m wide while increasing the sensitivity! I also attended meetings discussing the most recent LIGO signals; I enjoyed seeing the collaboration and discussion determining if they were gravitational waves. I shared my own work during these meetings, and the fresh perspectives of the other researchers provided a different approach key to solving my project.
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+
+%-------------------------------------------
+\end{document}
