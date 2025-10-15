@@ -89,9 +89,9 @@
     {\textbf{University of Cambridge: Natural Sciences M.Sci. (Physical)}} & \textit{Sep. 2017 -- July 2021}\vspace{2pt}
     \end{tabular*}
     \begin{tabular*}{0.97\textwidth}[t]{p{0.1\textwidth} >{\raggedright\arraybackslash}p{0.76\textwidth}@{\hskip 0.1cm}r} % @{\extracolsep{\fill}}
-        Part IA & Computer Science,  Materials Science, Mathematics, and Physics. & \nth{1} (75.4\%)\\
+        Part IA & Computer Science, Materials Science, Mathematics, and Physics. & \nth{1} (75.4\%)\\
         
-        Part IB & Double Physics and Materials Science.& \nth{1} (76.7\%)\\
+        Part IB & Double Physics and Materials Science. & \nth{1} (76.7\%)\\
         
         Part II & Physics: my courses included Advanced Quantum, Astrophysical Fluid Dynamics, Particle and Nuclear Physics, and Relativity. & \nth{1} (79.2\%)\\
         
@@ -177,8 +177,8 @@
   I have experience with a variety of programming languages and software tools.
   During my undergraduate degree, I used \textsc{java} and functional programming in my computer science courses, and \textsc{Python} and \textsc{Matlab} for scientific computing.
   Through my PhD research, I have worked with a variety of programming languages, primarily \textsc{Python} and \textsc{Fortran}, with some \textsc{C++}.
-  Recently, I have been using GPU acceleration with \textsc{jax}, and experimenting with \textsc{rust}.
-  I make use of \textsc{git} for version control of all my projects.
+  Recently, I have been using GPU acceleration with \textsc{JAX}, and experimenting with \textsc{rust}.
+  I make habitual use of \textsc{git} for version control of all my projects.
 
   I have made contributions to open-source scientific software, including the widely-used \textsc{Python} libraries \href{https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html}{\textsc{pandas}} and \href{https://openhub.net/p/matplotlib/contributors/2282777684444}{\textsc{matplotlib}}, via \textsc{github}.
   I took the lead in keeping my research group's various packages up to date with the latest \textsc{Python} dependencies, particularly the sample post-processing package \textsc{anesthetic}, which integrates tightly with \textsc{pandas}. I also made improvements to the nested sampling tool \textsc{PolyChord}, which is used by many research groups worldwide.
@@ -188,7 +188,7 @@
 \section{Research}
   \resumeSubHeadingListStart
 
-  \resumeSubheading
+    \resumeSubheading
       {PhD Project: ``Bayesian methods in a flexible universe: }{Oct. 2021 -- Sep. 2025}
       \vspace{-10pt}
       \resumeSubheading{ sampling, tension and dark energy"}{Prof.~M.P.~Hobson, Dr.~W.J.~Handley, Prof.~A.N.~Lasenby}
@@ -197,8 +197,10 @@
         In cosmology, there are many cases where it is useful to reconstruct one--dimensional functions, such as the primordial matter power spectrum or the evolution of the dark energy equation of state. I investigated a free-form approach: a linear spline between a variable number of nodes, using Bayesian statistics to make comparisons between these and other models.
         A wide range of cosmological datasets were used, including the cosmic microwave background, baryon acoustic oscillations, and Type Ia supernovae.
         In addition to computing the Bayesian evidence for model comparison, I also used statistics to quantify the possibility of tension between these datasets, and how this tension evolves with model choice.
+
+        I also investigated the effects of cluster detection for mode detection and evidence calculation in nested sampling of multi-modal posterior probability distributions.
       \resumeItemListEnd
-  
+
     \resumeSubheading
       {CDT internship at PolyChord Ltd: MIDAS}{Oct. 2023 -- March 2024}
       \resumeItemListStart
@@ -209,18 +211,27 @@
       \resumeItemListEnd
 
     \resumeSubheading
+      {Ozone damage in broadleaf saplings identified from reflectance spectra}{Nov. -- Dec. 2023}
+      \resumeItemListStart
+        \item[]
+          Tropospheric ozone is a pollutant which can damage vegetation.
+          Hyperspectral reflectance spectra of leaves can be used to identify signatures of different stressors.
+          I became involved in this project through a collaboration with Dr.~Anna Jones, who had mentioned that the standard analysis pipeline would take many hours to run.
+          I got it down to under a second!
+      \resumeItemListEnd
+  
+    \resumeSubheading
       {Part III Research Project ``Controlling the Beast"}{Oct. 2020 -- May 2021}
       \resumeItemListStart
         \item[]
-        The Magdelena Ridge Observatory Interferometer has a problem with its prototype hardware: the mirrors used to steer light beams from the telescopes to the combining facility are thermally unstable, causing the light beams to wander in angle unacceptably. My project used temperature measurements of the components to understand the dominant causes of this motion, and developed a predictive model to be used to control a corrective system. I also identified issues with the experimental setup which will be corrected in future tests. I learned to use advanced statistical techniques including principal component analysis and singular value decomposition, and machine learning using the Keras API for TensorFlow.
-
+        The Magdalena Ridge Observatory Interferometer has a problem with its prototype hardware: the mirrors used to steer light beams from the telescopes to the combining facility are thermally unstable, causing the light beams to wander in angle unacceptably. My project used temperature measurements of the components to understand the dominant causes of this motion, and developed a predictive model to be used to control a corrective system. I also identified issues with the experimental setup which will be corrected in future tests. I learned to use advanced statistical techniques including principal component analysis and singular value decomposition, and machine learning using the Keras API for TensorFlow.
       \resumeItemListEnd
 
     \resumeSubheading
       {Blundell Lab, University of Cambridge}{June 2020 -- Sep. 2020}
       \resumeItemListStart
         \item[]
-        I remotely investigated a dataset of ultra-deep genome sequences from the Avon Longnitudinal Study of Parents and Children (ALSPAC) to create a model for the frequency of sequencing errors in blood samples. I conclusively showed that the position-specific Poisson noise model usually used to identify low-frequency variants is unsuitable. I improved my data analysis skills, in particular in dealing with using files much larger than my laptop's RAM, and gained insight into working in a different field.
+        I remotely investigated a dataset of ultra-deep genome sequences from the Avon Longitudinal Study of Parents and Children (ALSPAC) to create a model for the frequency of sequencing errors in blood samples. I conclusively showed that the position-specific Poisson noise model usually used to identify low-frequency variants is unsuitable. I improved my data analysis skills, in particular in dealing with using files much larger than my laptop's RAM, and gained insight into working in a different field.
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
