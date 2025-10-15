@@ -102,13 +102,13 @@
 \newcommand{\schoolTable}{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}} r}
-      \textbf{Beckfoot School} &\textit{Sep. 2010 -- June 2017}\vspace{-5pt}
+      \textbf{Beckfoot School, Bingley} &\textit{Sep. 2010 -- June 2017}\vspace{-5pt}
     \end{tabular*}
 
     \begin{tabular*}{0.97\textwidth}[t]{p{0.1\linewidth} >{\raggedright\arraybackslash}p{0.73\linewidth} r}
       A-level & Computer Science: A*, Maths: A*, Further Maths: A*, Physics: A*. & \\
       AS-level & Chemistry: A. & \\
-      GCSE & 1 A\^{}, 8 A*s, 2As and 1 B. & \\
+      GCSE & One A\^{}, eight A*s, two As and one B, including English and maths. & \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -167,41 +167,50 @@
 \section{Education}
   \resumeSubHeadingListStart
     \degreeTable
-    % \schoolTable
+    \schoolTable
     % \footnotetext{Due to taking formative assessments because of COVID, will be awarded once I have completed Part III.}
-    %\schoolTable
+    %\schoolTableC++
   \resumeSubHeadingListEnd
 
 
 %-----------TEACHING-----------
 \section{Teaching}
     \resumeItemListStart
-    \resumeItem
-    {
+    \resumeItem {
       During my PhD, I have supervised Part IA NST Mathematics, for both Queens' and Pembroke colleges.
       In total, I have supervised 40 students over four years, approximately 367 hours of teaching.
     }
     \resumeItem
     {
-      Through \nth{6} form, I assisted teaching year 7 music classes and after-school two-to-one sessions with year 10 and 11 students requiring extra help.
+      Through \nth{6} form, I assisted teaching year 7 music classes and after-school small-group sessions with year 10 and 11 students requiring extra help.
     }
     \resumeItemListEnd
 
-\section{Software}
-  \resumesubheading{Contributions}
-    \resumeItemListStart
-      \resumeItem{
-        \href{https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html}{pandas} and matplotlib
-      }
+\section{Software and Programming}
+  During my undergraduate degree, I used \textsc{java} and functional programming in my computer science courses, and \textsc{Python} and \textsc{Matlab} for scientific computing.
+  Through my PhD research, I have worked with a variety of programming languages, primarily \textsc{Python} and \textsc{Fortran}, with some \textsc{C++}.
+  Recently, I have been using GPU acceleration with \textsc{jax}, and experimented with \textsc{rust}.
+  I make use of \textsc{git} for version control of all my projects.
+
+  I have made contributions to open-source scientific software, including the widely-used \textsc{python} libraries \href{https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html}{\textsc{pandas}} and \href{https://openhub.net/p/matplotlib/contributors/2282777684444}{\textsc{matplotlib}}, via \textsc{github}.
+  I also took the lead in keeping my research group's various \textsc{python} packages up to date with the latest \textsc{python} versions and dependencies, mainly the sample post-processing package \textsc{anesthetic}.
+
 
 %-----------RESEARCH----------- 
 \section{Research}
   \resumeSubHeadingListStart
 
+    \resumeSubheading
+      {CDT internship at PolyChord Ltd: MIDAS}{Oct. 2023 -- March 2024}
+      \resumeItemListStart
+        \item[]
+        something here
+      \resumeItemListEnd
+
   \resumeSubheading
-      {PhD Project: ``Bayesian methods in a flexible universe: sampling, }{Oct. 2021 -- present}
-      \vspace{-10.5pt}
-      \resumeSubheading{ tension and dark energy"}{Prof.~M.P.~Hobson, Dr.~W.J.~Handley, Prof.~A.N.~Lasenby}
+      {PhD Project: ``Bayesian methods in a flexible universe: }{Oct. 2021 -- Sep. 2025}
+      \vspace{-10pt}
+      \resumeSubheading{ sampling, tension and dark energy"}{Prof.~M.P.~Hobson, Dr.~W.J.~Handley, Prof.~A.N.~Lasenby}
       \resumeItemListStart
         \item[]
         In cosmology, there are many cases where it is useful to reconstruct one--dimensional functions, such as the primordial matter power spectrum or the evolution of the dark energy equation of state. I am investigating a free-form approach: a linear spline between a variable number of nodes, using my modified branches of the Boltzmann code \href{https://github.com/Ormorod/CAMB}{\texttt{CAMB}}, sampling and modelling framework \href{https://github.com/ormorod/cobaya}{\texttt{Cobaya}}, and the nested sampler \href{https://github.com/ormorod/PolyChordLite}{\texttt{PolyChord}}. 
