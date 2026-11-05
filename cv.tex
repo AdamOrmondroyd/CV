@@ -173,6 +173,30 @@
   \resumeSubHeadingListEnd
 
 
+%-----------EMPLOYMENT-----------
+\section{Employment}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Scientist, PolyChord Ltd}{Oct. 2025 -- present}
+      \resumeItemListStart
+        \item[]
+          My work centres on \href{https://polychord.co.uk/strategy-optimisation-midas.html}{MIDAS} ([full name TBC]), which combines the OODA loop (observe, orient, decide, act) with Bayesian experimental design, using inference tools from cosmology as the glue.
+          I am first author of the technical reports for our project funded by the Defence Science and Technology Laboratory (Dstl).
+          My feedback as an early adopter informed the design of the \textsc{BlackJAX} nested sampler, to which I continue to contribute upstream.
+          PolyChord's successful Innovate UK Frontier AI Discovery bid builds on the MIDAS example I developed during my internship; I also produced technical work for the bid and reviewed the proposal text.
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {CDT internship at PolyChord Ltd: MIDAS}{Oct. 2023 -- March 2024}
+      \resumeItemListStart
+        \item[]
+          I was the primary developer of the harder simulated example of MIDAS, on a Defence and Security Accelerator (DASA) project; I also improved its multiprocessing, addressed assumptions built into its prior, and began an alternative approach using simulation-based inference.
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
 \section{Software and Programming}
   I have experience with a variety of programming languages and software tools.
   During my undergraduate degree, I used \textsc{java} and functional programming in my computer science courses, and \textsc{Python} and \textsc{Matlab} for scientific computing.
@@ -183,31 +207,29 @@
   I have made contributions to open-source scientific software, including the widely-used \textsc{Python} libraries \href{https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html}{\textsc{pandas}} and \href{https://openhub.net/p/matplotlib/contributors/2282777684444}{\textsc{matplotlib}}, via \textsc{github}.
   I took the lead in keeping my research group's various packages up to date with the latest \textsc{Python} dependencies, particularly the sample post-processing package \textsc{anesthetic}, which integrates tightly with \textsc{pandas}. I also made improvements to the nested sampling tool \textsc{PolyChord}, which is used by many research groups worldwide.
 
+  I believe that less code is more.
+  My package \href{https://github.com/adamormondroyd/janesthetic}{\textsc{janesthetic}} reimplements the key calculations of \textsc{anesthetic} in about 140 lines of \textsc{JAX}, with tests confirming that it matches \textsc{anesthetic}'s results.
+  I also wrote \href{https://github.com/adamormondroyd/jesi}{\textsc{jesi}}, a minimal \textsc{JAX} library of cosmological likelihoods, which I used for my paper ``Dynamic or Systematic?''.
+
 
 %-----------RESEARCH----------- 
 \section{Research}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {PhD Project: ``Bayesian methods in a flexible universe: }{Oct. 2021 -- Sep. 2025}
+      {PhD: ``Bayesian methods in a flexible universe: }{Oct. 2021 -- Sep. 2025}
       \vspace{-10pt}
-      \resumeSubheading{ sampling, tension and dark energy"}{Prof.~M.P.~Hobson, Dr.~W.J.~Handley, Prof.~A.N.~Lasenby}
+      \resumeSubheading{ sampling, tension and dark energy"}{Awarded May 2026}
       \resumeItemListStart
         \item[]
+        \textit{Supervisors: M.P.~Hobson, W.J.~Handley, A.N.~Lasenby}\\
         In cosmology, there are many cases where it is useful to reconstruct one--dimensional functions, such as the primordial matter power spectrum or the evolution of the dark energy equation of state. I investigated a free-form approach: a linear spline between a variable number of nodes, using Bayesian statistics to make comparisons between these and other models.
         A wide range of cosmological datasets were used, including the cosmic microwave background, baryon acoustic oscillations, and Type Ia supernovae.
         In addition to computing the Bayesian evidence for model comparison, I also used statistics to quantify the possibility of tension between these datasets, and how this tension evolves with model choice.
 
         I also investigated the effects of cluster detection for mode detection and evidence calculation in nested sampling of multi-modal posterior probability distributions.
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {CDT internship at PolyChord Ltd: MIDAS}{Oct. 2023 -- March 2024}
-      \resumeItemListStart
-        \item[]
-          During my internship at PolyChord Ltd, I worked on the \href{https://polychord.co.uk/strategy-optimisation-midas.html}{MIDAS} (Maximal Information for Data Acquisition Strategy) project, which uses Bayesian methods to optimise decision making in complex scenarios, where many interdependent decisions are to be made at once.
-          My role in the project was to further develop the existing codebase, focussing on details of the multiprocessing implementation, and addressing assumptions which were inherent in the prior.
-          I also began work on an alternative approach to the problem using Simulation Based Inference.
+        I wrote a first-author paper on the DESI DR2 results within two days of their release; it was later published in MNRAS.
+        I have presented my work at EuCAIFCon I and II (flash talks and posters) and GR/Amaldi (talk).
       \resumeItemListEnd
 
     \resumeSubheading
@@ -256,11 +278,27 @@
     \resumeItemListStart
     \resumeItem {
       During my PhD, I have supervised Part IA NST Mathematics, for both Queens' and Pembroke colleges.
-      In total, I have supervised 40 students over four years, approximately 367 hours of teaching.
+      In total, I have supervised 40 students over four years, 365 hours of teaching.
     }
     \resumeItem
     {
       Through \nth{6} form, I assisted teaching year 7 music classes and after-school small-group sessions with year 10 and 11 students requiring extra help.
+    }
+    \resumeItemListEnd
+
+%-----------EXTRACURRICULAR-----------
+\section{Extracurricular}
+    \resumeItemListStart
+    \resumeItem {
+      Treasurer of the Cambridge University Automobile Club for four years and Championship Secretary for two, organising a record number of race events in 2024--25.
+    }
+    \resumeItem {
+      Twice club champion (2023--24 and 2025--26), with 13 wins, 5 second places and 9 third places.
+      I contributed to four consecutive Varsity wins, winning the race twice and finishing second and third in the others, and briefly held the lap record at Red Lodge.
+      I also placed third in British Universities Karting Championship (BUKC) qualifying races in 2022 and 2023, both helping to qualify the team for the main championship.
+    }
+    \resumeItem {
+      Coxed Queens' College M3 for a year and M1 the following Michaelmas term.
     }
     \resumeItemListEnd
 
