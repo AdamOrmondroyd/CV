@@ -24,6 +24,7 @@
 \usepackage{array}
 \usepackage{contour}
 \usepackage{ulem}
+\usepackage{needspace}
 
 \renewcommand{\ULdepth}{1.8pt}
 \contourlength{0.8pt}
@@ -89,7 +90,7 @@
     {\textbf{University of Cambridge: Natural Sciences M.Sci. (Physical)}} & \textit{Sep. 2017 -- July 2021}\vspace{2pt}
     \end{tabular*}
     \begin{tabular*}{0.97\textwidth}[t]{p{0.1\textwidth} >{\raggedright\arraybackslash}p{0.76\textwidth}@{\hskip 0.1cm}r} % @{\extracolsep{\fill}}
-        Part IA & Computer Science, Materials Science, Mathematics, and Physics. & \nth{1} (75.4\%)\\
+        Part IA & Computer Science (including algorithms and numerical methods), Materials Science, Mathematics, and Physics. & \nth{1} (75.4\%)\\
         
         Part IB & Double Physics and Materials Science. & \nth{1} (76.7\%)\\
         
@@ -181,27 +182,35 @@
       {Data Scientist, PolyChord Ltd}{Oct. 2025 -- present}
       \resumeItemListStart
         \item[]
-          My work centres on \href{https://polychord.co.uk/strategy-optimisation-midas.html}{MIDAS} ([full name TBC]), which combines the OODA loop (observe, orient, decide, act) with Bayesian experimental design, using inference tools from cosmology as the glue.
+          My work centres on \href{https://polychord.co.uk/strategy-optimisation-midas.html}{MIDAS} (Maximum Information Data Acquisition Strategies), which combines the OODA loop (observe, orient, decide, act) with Bayesian experimental design, using inference tools from cosmology as the glue.
           I am first author of the technical reports for our project funded by the Defence Science and Technology Laboratory (Dstl).
           My feedback as an early adopter informed the design of the \textsc{BlackJAX} nested sampler, to which I continue to contribute upstream.
-          PolyChord's successful Innovate UK Frontier AI Discovery bid builds on the MIDAS example I developed during my internship; I also produced technical work for the bid and reviewed the proposal text.
+          PolyChord's successful Innovate UK Frontier AI Discovery bid builds on the MIDAS drone simulation I developed during my internship; I also produced technical work for the bid and reviewed the proposal text.
       \resumeItemListEnd
 
     \resumeSubheading
       {CDT internship at PolyChord Ltd: MIDAS}{Oct. 2023 -- March 2024}
       \resumeItemListStart
         \item[]
-          I was the primary developer of the harder simulated example of MIDAS, on a Defence and Security Accelerator (DASA) project; I also improved its multiprocessing, addressed assumptions built into its prior, and began an alternative approach using simulation-based inference.
+          I was the primary developer of a simulated capture-the-flag game in which MIDAS directs drones among buildings, on a Defence and Security Accelerator (DASA) project; I also improved MIDAS's multiprocessing, addressed assumptions built into its prior, and began an alternative approach using simulation-based inference.
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Keighley \& Worth Valley Railway}{Summers 2017 and 2018}
+      \resumeItemListStart
+        \item[]
+          My roles included crossing keeper (operating signals), station foreman, booking clerk and on-train ticket inspector, and I was occasionally assigned track walks to inspect and make minor repairs to the line.
+          The staff also asked me to reorganise their database in quiet moments between trains.
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
 \section{Software and Programming}
-  I have experience with a variety of programming languages and software tools.
   During my undergraduate degree, I used \textsc{java} and functional programming in my computer science courses, and \textsc{Python} and \textsc{Matlab} for scientific computing.
-  Through my PhD research, I have worked with a variety of programming languages, primarily \textsc{Python} and \textsc{Fortran}, with some \textsc{C++}.
-  Recently, I have been using GPU acceleration with \textsc{JAX}, and experimenting with \textsc{rust}.
+  Through my PhD research, I have worked primarily in \textsc{Python} and \textsc{Fortran}, with some \textsc{C++}.
+  Recently, I have been using GPU acceleration with \textsc{JAX}.
+  Beyond my research, I have written \textsc{C} and \textsc{rust}, and got \href{https://github.com/AdamOrmondroyd/resi}{\textsc{Fortran} talking to \textsc{rust}} through \textsc{C++} to see if I could.
   I make habitual use of \textsc{git} for version control of all my projects.
 
   I have made contributions to open-source scientific software, including the widely-used \textsc{Python} libraries \href{https://pandas.pydata.org/docs/dev/whatsnew/v2.0.0.html}{\textsc{pandas}} and \href{https://openhub.net/p/matplotlib/contributors/2282777684444}{\textsc{matplotlib}}, via \textsc{github}.
@@ -210,9 +219,11 @@
   I believe that less code is more.
   My package \href{https://github.com/adamormondroyd/janesthetic}{\textsc{janesthetic}} reimplements the key calculations of \textsc{anesthetic} in about 140 lines of \textsc{JAX}, with tests confirming that it matches \textsc{anesthetic}'s results.
   I also wrote \href{https://github.com/adamormondroyd/jesi}{\textsc{jesi}}, a minimal \textsc{JAX} library of cosmological likelihoods, which I used for my paper ``Dynamic or Systematic?''.
+  My \href{https://github.com/adamormondroyd/flexknot}{\textsc{flexknot}} library, from my PhD, has since been used in a colleague's research.
 
 
 %-----------RESEARCH----------- 
+\needspace{6\baselineskip}
 \section{Research}
   \resumeSubHeadingListStart
 
@@ -228,12 +239,13 @@
         In addition to computing the Bayesian evidence for model comparison, I also used statistics to quantify the possibility of tension between these datasets, and how this tension evolves with model choice.
 
         I also investigated the effects of cluster detection for mode detection and evidence calculation in nested sampling of multi-modal posterior probability distributions.
+
         I wrote a first-author paper on the DESI DR2 results within two days of their release; it was later published in MNRAS.
         I have presented my work at EuCAIFCon I and II (flash talks and posters) and GR/Amaldi (talk).
       \resumeItemListEnd
 
     \resumeSubheading
-      {Ozone damage in broadleaf saplings identified from reflectance spectra}{Nov. -- Dec. 2023}
+      {Ozone damage in broadleaf saplings from reflectance spectra}{Nov. -- Dec. 2023}
       \resumeItemListStart
         \item[]
           Tropospheric ozone is a pollutant which can damage vegetation.
@@ -273,12 +285,34 @@
 
   \resumeSubHeadingListEnd
   
+%-----------PUBLICATIONS-----------
+\section{Publications}
+    \resumeItemListStart
+    \resumeItem {
+      A.N.~Ormondroyd, W.J.~Handley, M.P.~Hobson, A.N.~Lasenby, D.~Yallup, \href{https://doi.org/10.1093/mnras/stag615}{``Dynamic or systematic? Bayesian model selection between dark energy and supernova biases''}, \textit{MNRAS} (2026).
+    }
+    \resumeItem {
+      A.N.~Ormondroyd, W.J.~Handley, M.P.~Hobson, A.N.~Lasenby, \href{https://doi.org/10.1093/mnras/staf2207}{``Comparison of dynamical dark energy with $\Lambda$CDM in light of DESI DR2''}, \textit{MNRAS} (2026).
+    }
+    \resumeItem {
+      S.~Legner, W.J.~Handley, W.~Barker, A.N.~Ormondroyd, \href{https://doi.org/10.1088/1475-7516/2026/03/003}{``Alleviating the Hubble tension with Torsion Condensation (TorC)''}, \textit{JCAP} (2026).
+    }
+    \resumeItem {
+      A.N.~Ormondroyd, W.J.~Handley, M.P.~Hobson, A.N.~Lasenby, \href{https://doi.org/10.1093/mnras/staf1144}{``Non-parametric reconstructions of dynamical dark energy via flexknots''}, \textit{MNRAS} (2025).
+    }
+    \resumeItem {
+      A.L.~Jones, A.N.~Ormondroyd, F.~Hayes, E.S.~Jeffers, \href{https://doi.org/10.1016/j.envpol.2024.124642}{``Reflections of stress: Ozone damage in broadleaf saplings can be identified from hyperspectral leaf reflectance''}, \textit{Environmental Pollution} (2024).
+    }
+    \resumeItem {
+      A.N.~Ormondroyd, W.J.~Handley, M.P.~Hobson, A.N.~Lasenby, \href{https://arxiv.org/abs/2310.08490}{``Tilting the scales: weighing prior dependency and global tensions of CMB lensing''}, preprint, arXiv:2310.08490 (2023).
+    }
+    \resumeItemListEnd
+
 %-----------TEACHING-----------
 \section{Teaching}
     \resumeItemListStart
     \resumeItem {
-      During my PhD, I have supervised Part IA NST Mathematics, for both Queens' and Pembroke colleges.
-      In total, I have supervised 40 students over four years, 365 hours of teaching.
+      During my PhD, I supervised Part IA NST Mathematics for both Queens' and Pembroke colleges: 40 students over four years, 365 hours of teaching.
     }
     \resumeItem
     {
